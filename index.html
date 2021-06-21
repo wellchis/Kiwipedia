@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+    <style>
+      *{
+        padding:0;
+        margin:0;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      html, body{
+        width:100%;
+        height:100%;
+        background-color: #eee;
+        color:#008000;
+        text-align:center;
+      }
+
+      #wrapper{
+        position: relative;
+
+        margin:auto;
+        background-color: white;
+      }
+
+      header{
+        width:100%;
+        height:45px;
+        background-color: #bce55c;
+        border-bottom:2px solid #eaea23;
+      }
+
+      .logo{
+        padding:0 30px;
+      }
+
+      h1 a{
+        color:#008000;
+      }
+
+      section{
+        border-top:5px solid white;
+        /* background-color: #bce55c; */
+      }
+
+      #image img{
+        margin:100px 0 50px;
+        border:1px solid #008000;
+        border-radius: 20%;
+        box-shadow: 0 2px 0 0;
+
+      }
+
+      .search{
+        margin-right:75px;
+      }
+
+      input{
+        width:400px;
+        height:50px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding-left:20px;
+      }
+
+      input:focus{
+        outline:none;
+      }
+
+      button{
+        position:absolute;
+        width:75px;
+        height:50px;
+        border-top-right-radius:10px;
+        border-bottom-right-radius: 10px;
+        border-left:none;
+        cursor:pointer;
+      }
+
+      .list{
+        padding-bottom:130px;
+      }
+
+      .lately{
+        width:300px;
+        height:165px;
+        background-color: white;
+        margin:50px auto;
+        border-radius: 10px;
+        border:1px solid #008000;
+      }
+
+      hr{
+        margin:10px;
+      }
+
+      .lately ul {
+        margin:20px 0;
+        font-weight:bold;
+      }
+
+      .lately ul li, .lately ul li a{
+        margin:10px 0;
+        color:black;
+        font-weight:normal;
+      }
+
+      footer{
+        display:absolute;
+        bottom:0;
+        width:100%;
+        background-color: #eee;
+        color:#008000;
+        font-size:12px;
+        padding:20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div class="logo">
+          <h1><a href="index.html">kiwipedia</a></h1>
+        </div>
+      </header>
+
+      <section>
+        <div id="image">
+          <img src="imgs/kiwi.gif">
+        </div>
+        <div class="search" style="text-align:center;">
+          <input type="search" name="search" onkeypress="alert('준비중입니다.')" placeholder="검색어를 입력해주세요." >
+          <button type="button" name="button" onclick="alert('준비중입니다.')">검색</button>
+        </div>
+        <div class="list">
+          <div class="lately">
+            <ul>
+              최근 조회된 자료
+              <hr>
+              <li><a href="1.html">키위</li>
+              <li><a href="2.html">키위새</a></li>
+              <li><a href="3.html">도도새</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        키위교육센터<br>
+        경기도 키위시 키위구 키위대로 222 2층 <br>
+        전화번호 : 1588-1588
+      </footer>
+    </div>
+  </body>
+</html>

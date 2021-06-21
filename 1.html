@@ -1,65 +1,351 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Home</title>
-  <img src="https://s3-ap-northeast-2.amazonaws.com/opentutorials-user-file/module/3135/7648.png"
-  width=100% alt="">
-  <img src="img/1.jpg" width=100% alt="">
-</head>
-<body>
-<!-- hypertext reference -->
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>1</title>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        text-decoration: none;
+        list-style: none;
+      }
 
-<div style = "color:green;"
-  <h1>hello web</h1>
-  <h2>hello web</h2>
-  <h3>hello web</h3>
-  <h4>hello web</h4>
-  <h5>hello web</h5>
-  <h6>hello web</h6>
-</div>
+      html,body{
+        width:100%;
+        height:100%;
+        background-color: #eee;
+        font-size: 0.9em;
+      }
 
-<!-- 순서화된 리스트 -->
-<ol>
-  <li><a href="#">HTML</a></li>
-  <li><a href="#">CSS</a></li>
-  <li><a href="#">JavaScript</a></li>
-</ol>
-<ul>
-  <li><a href="#">1. Python</a></li>
-  <li><a href="#">2. C</a></li>
-  <li><a href="#">3. Java</a></li>
-</ul>
+      #wrapper{
+        width:100%;
+        height:100%;
+        background:url('imgs/bgcolor.png');
+        background-size: 61px;
+        background-repeat: repeat-x;
+      }
 
-<a href="https://cafe.naver.com/swengineers" target="_blank">SW Engineers</a><br>
+      #wire{
+        width:70%;
+        height:100%;
+        margin:auto;
+      }
 
-<strong>Hypertext Markup Language (HTML)</strong>
-is the standard markup language used for
-<u>creating web pages</u> and web applications.
+      header, header a{
+        color:white;
+        margin-bottom:0;
+      }
 
-<p>Alongside Cascading Style Sheets (CSS) and JavaScript (JS),
-it forms the triad of the World Wide Web (WWW).</p>
-<p style="margin-top:45px;">A web browser would typically receive HTML documents
-from either a web server or local storage.</p>
+      .logo h1{
+        float:left;
+      }
 
-<br>
-These documents are then rendered into multimedia
-web pages by the browser for viewing by a user and as such;
-one can say that these documents basically
-make up the structure of a web page semantically
-and originally, cues for the appearance of the document.
+      .logo{
+        display:inline;
+      }
+
+      .logo a{
+        display:block;
+      }
+
+      .logo img{
+        position:relative;
+        float:left;
+        top:3px;
+        padding:0 10px 0 25px;
+        width:40px;
+      }
+
+      input{
+        float:left;
+        margin:10px 0 0 10px;
+        width:240px;
+        height:28px;
+        border:1px solid #eee;
+        border-radius: 10px;
+        padding-left: 10px;
+      }
+
+      nav{
+        display:flex;
+        justify-content: flex-start;
+        padding: 5px 0 0 10px;
+      }
+
+      nav ul{
+        display:flex;
+        justify-content:flex-start;
+      }
+
+      h3 {
+        padding-top:10px;
+      }
+
+      nav li{
+        padding:12px 0 10px 10px;
+      }
+
+      section{
+        position: relative;
+      }
+
+      article{
+        display:block;
+        float:left;
+        margin-top:1px;
+        width:75%;
+        padding:0 24px;
+        background-color: white;
+        border:1px solid #ccc;
+      }
+
+      h2{
+        padding:10px;
+      }
+
+      .top{
+        width:100%;
+        height:400px;
+        display:block;
+      }
+
+      .index{
+        display:block;
+        float:left;
+        margin:20px 20px 20px 0;
+        padding:20px;
+        border:1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .index li{
+        padding:2px;
+      }
+
+      table{
+        float:right;
+        text-align:right;
+        border:1px solid #ccc;
+        text-align: center;
+        border-radius: 5px;
+        border:0px solid #008000;
+        margin:20px 0 20px 20px;
+        background:#008000;
+        border-collapse:collapse;
+      }
+
+      table td, table tr{
+        border:none;
+        border-collapse:collapse;
+      }
+
+      .table-head, .table-kind, .table-value{
+        height:35px;
+        border-radius: 5px;
+        padding-top: 10px;
+        font-weight:bold;
+        font-size: 18px;
+        color:white;
+      }
+
+      .table-value{
+        background:white;
+        border-right, border-bottom:2 solid #008000;
+        border-radius: 0;
+        color:black;
+        font-weight: normal;
+      }
+
+      hr{
+        margin:20px 0;
+      }
+
+      .contents ul li{
+        font-size:26px;
+        font-weight:bold;
+        padding:20px 0 20px 10px;
+      }
+
+      .contents ul li a, .index a{
+        color:#0275d8;
+      }
+
+      .contents p{
+        margin-bottom:20px;
+      }
+
+      aside{
+        display:block;
+        float:right;
+        background: white;
+        width:240px;
+        /* height:100%; */
+        border:1px solid #ccc;
+        margin:auto;
+      }
+
+      aside ul li{
+        height:20px;
+        padding:10px 20px 10px 20px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      /* aside ul li:last-child{
+        padding-bottom: 20px;
+      } */
+
+      .list-head{
+        height:50px;
+        font-weight:bold;
+        font-size: 20px;
+          padding:20px 0 0 20px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      footer{
+        float:right;
+        background-color:white;
+        color:#008000;
+        font-size:12px;
+        padding-top:30px;
+        padding-bottom:30px;
+        text-align: center;
+        /* display:absolute; */
+        width:100%;
+        bottom:0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="wire">
+        <header>
+            <div class="logo">
+              <a href="index.html">
+                <img src="imgs/kiwi.png">
+                <h1>kiwipedia</h1>
+              </a>
+              <input type="text" name="search" placeholder="검색">
+            </div>
+            <nav>
+              <h3>연관검색어</h3>
+              <ul>
+                <li><a href="2.html">| 키위새</a></li>
+                <li><a href="3.html">| 도도새</a></li>
+              </ul>
+            </nav>
+        </header>
+
+        <section>
+          <article id="contents">
+            <h2>키위</h2>
+            <hr>
+            <div class="top">
+              <div class="index" id="index">
+                <ul>
+                  <h1>목차</h1>
+                  <li><a href="#1">1.</a>개요</li>
+                  <li><a href="#2">2.</a>상세</li>
+                  <li><a href="#3">3.</a>원산지</li>
+                  <li><a href="#4">4.</a>특징</li>
+                  <li><a href="#5">5.</a>효능</li>
+                </ul>
+              </div>
+              <table class="profile">
+                <tbody>
+                  <tr>
+                    <td colspan="2">
+                      <div class="table-head">키위</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><img src="imgs/kiwi.jpg" width="300px"></td>
+                  </tr>
+                  <tr>
+                    <td><div class="table-kind">종류</div></td>
+                    <td><div class="table-value">과일</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="contents">
+              <ul>
+                <li>
+                  <a id="1" href="#index">1.</a>개요
+                  <hr>
+                </li>
+                <p>
+                  가장 많이 재배되는 종은 Fuzzy Kiwifruit라고 불리는 A. deliciosa 종의 키위로, 키위새와 모양이 비슷해서 키위라는 이름을 붙였다. 털이 붙은 껍질 속에 초록색, 혹은 노란색의 부드러운 과육이 들어있다. 대한민국에는 다래라는 친척뻘 과일이 자생하고 있으며(A. arguta, 해외에서는 키위베리라고 부른다). 맛은 다래쪽이 더 달다고 한다.
+                </p>
 
 
-<br>
+                <li>
+                  <a id="2" href="#index">2.</a>상세
+                  <hr>
+                </li>
+                <p>
+                  키위 하면 보통 뉴질랜드가 연상되지만, 의외로 키위의 원산지는 중국이다. 하지만 20세기 초에 중국 외의 나라에도 전파되어 재배되기 시작했고, 때문에 본래 키위의 영어 이름은 차이니즈 구즈베리(Chinese gooseberry)였다.
+                  하지만 6.25 전쟁에 참전한 중공군 때문에 미국 내에서 적국이 된 중국에 대한 이미지가 나빠지면서 소비자들이 차이니즈 구즈베리를 찾지 않게 되었고, 이에 뉴질랜드에서 미국으로 차이니즈 구즈베리를 수입하던 업체에서 중국 색을 뺀 새로운 이름을 붙이기로 결정해 작은 멜론 이라는 뜻의 멜로네트(Melonnete)라는 이름을 붙였다.
+                  하지만 이름에 '멜론'이 들어가서인지 멜론으로 취급되어 이름을 바꾸기 전보다 수입 관세가 더 붙게 되었고, 이에 뉴질랜드 측에서는 뉴질랜드의 국조인 키위와 과일의 생김새가 비슷하다는 데서 착안해 '키위' 라는 이름을 새로 지었다.#
+                  이런 역사 때문에 키위가 역수입된 중국에서 키위는 두 가지 이름을 갖게 되었다. 전통적으로는 獼猴桃(미후도,míhóutáo)로, 두 번째 이름은 서양에서 들어온 것을 음차한 奇异果(기이과, qíyìguǒ)로
+                </p>
 
-<b>asdf</b>
-<u>asdf</u>
-<i>asdf</i>
-<div class = "asd" style = font color = "red">
-<font color = "red">
-asdf
+                <li>
+                  <a id="3" href="#index">3.</a>원산지
+                  <hr>
+                </li>
+                <p>
+                  최대 생산국은 당연히 원산지이자 농업규모가 어마어마한 중국이 전 세계 생산의 56%를 차지하지만[1] 2위는 의외로 이탈리아이다. 뉴질랜드는 생산량 3위. 4위는 이란이다.
+                  우리나라에서 키위를 도입해 기르기 시작했을 무렵에는 수입한 다래라는 뜻으로 '양다래'라는 이름으로 순화하자는 이야기가 꽤 많았다. 그 이후 성공적으로 키위 묘목을 성장시켜 수확이 가능해지자, 정치인 정운천이 여기에 붙인 이름이 '참다래'이다. 이 때 당시 그는 해남에서 농부로 지낸 인물이었다. 1991년에 "참다래유통사업단"을 발족시켰는데, 바로 여기서 따온 셈.
+                </p>
 
-<font size = "22px">
-<li>asdf</li>
-<a href="http://naver.com">asdf</a>
-</body>
+                <li>
+                  <a id="4" href="#index">4.</a>특징
+                  <hr>
+                </li>
+                <p>
+                  과육 자체는 과즙이 많고 무른 편.[2] 그래도 제법 단단한 과육을 지닌 것들[3]이 간혹 있기도 한데, 이런 것들도 식감이 사각사각한 느낌이 약간 나긴 해도 사과나 배 수준으로 단단하진 않다.
+                  맛에 대해선 보통 새콤달콤한 추가로 입천장이나 혀가 쓰라린 맛이라고 평하는 경우가 많다.
+                  단백질을 분해하는 효소를 함유하기 때문에 고기를 재워 연하게 하거나,[4] 피부의 각질을 제거하는 데 쓰이기도 한다.
+                  다만, 이 단백질 분해효소가 혀까지 분해시켜버리기 때문에 키위를 많이 먹으면[5] 혀가 따갑고 쓰라리다.[6] 실제로 키위 깐 것을 오래 잡고 있으면 피부가 약한 사람의 경우 손도 쓰라리는 경험을 체험할 수 있다(...)
+                  키위를 그냥 먹을때는 새콤달콤한 맛 때문에 못느끼겠지만 키위 안의 자잘한 씨는 쓰다. 그러므로 씨가 과육과 함께 곱게 갈리면 쓴 맛이 강하게 느껴진다. 특히 우유랑 상성이 좋지 않다. 그래도 요거트와의 상성은 조금 더 괜찮은 편.
+                  사과나 청포도 등 새콤달콤하면서도 키위보다 단 느낌이 강한 과일들과 함께 갈아먹으면 맛이 제법 좋다. 먹기 싫은 채소도 어떻게든 같이 먹고 싶을 경우 좀 더 건강하게(?) 먹고 싶을 경우 케일 등의 녹색 채소나 사과, 키위, 청포도 등을 섞어서 스무디 형식으로 갈아먹어도 된다.
+                  보통 신 맛이 더 강하다 알고 있지만 잘 익은 것들은 골드키위 못지 않게 맛이 부드럽다.[7] 특히 후숙이 지나치게 된 키위의 과육은 매우 무르고 신 맛이 적어 이게 그린키위 맞나 하는 생각도 들 정도. 그러나 보통 후숙을 별로 안 시킨 상태에서 파는데, 과하게 후숙하면 과육이 물러지고 밍밍한 단맛에 가까워지며, 특유의 새콤달콤한 맛은 적어지기 때문.[8]
+                  유통상의 문제로 마트나 통신판매로 판매하는 것들은 보통 후숙이 덜 되어 단단한 것들이 많으므로, 덜 시고 부드러운 키위를 먹고싶다면 사둬서 후숙하는 것이 좋다. 키위 자체는 후숙 속도가 느린 편이고 상온에 두면 햇빛 등으로 인해 변질이나 부패의 위험이 있으므로, 사과나 바나나 등 에틸렌을 방출하는 과일과 함께 비닐봉지에 싸서 냉장실 안에 넣어두고 만졌을 때 겉면이 말랑해질 때까지 후숙하는게 좋은 방법. 물론 마트에서도 운 좋으면 이미 후숙이 어느 정도 진행된 키위를 살 수도 있다. 가끔 유통기한 문제로 떨이처리 되는 키위들 중 일부가 이런 경우에 걸리기도 한다.
+                </p>
+
+                <li>
+                  <a id="5" href="#index">5.</a>효능
+                  <hr>
+                  <iframe src="https://www.youtube.com/embed/2wUwh0OrAVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </li>
+
+                Youtube:<a href="https://www.youtube.com/embed/2wUwh0OrAVw">https://www.youtube.com/embed/2wUwh0OrAVw</a>
+                <br><br>
+              </ul>
+            </div>
+          </article>
+        </section>
+
+        <aside class="side">
+          <ul>
+            <li class="list-head">최근 변경</li>
+            <li><a href="2.html">키위새</a></li>
+            <li><a href="3.html">도도새</a></li>
+            <li><a href="#" onclick="alert('준비중입니다.')">더보기</a></li>
+          </ul>
+        </aside>
+      </div>
+      <footer>
+        <div class="">
+          키위교육센터<br>
+          경기도 키위시 키위구 키위대로 222 2층 <br>
+          전화번호 : 1588-1588
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
