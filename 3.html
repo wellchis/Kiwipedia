@@ -3,244 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>3</title>
-    <style>
-      *{
-        margin:0;
-        padding:0;
-        text-decoration: none;
-        list-style: none;
-      }
-
-      body, html{
-        height:100%;
-        width:100%;
-        background-color: #eee;
-        font-size:0.9em;
-      }
-
-      #wrapper{
-        width:100%;
-        height:100%;
-        background:url('imgs/bgcolor.png');
-        background-size: 61px;
-        background-repeat: repeat-x;
-      }
-
-      #wire{
-        width:70%;
-        height:100%;
-        margin:auto;
-      }
-
-      header, header a{
-        color:white;
-        margin-bottom:0;
-      }
-
-      .logo h1{
-        float:left;
-      }
-
-      .logo{
-        display:inline;
-      }
-
-      .logo a{
-        display:block;
-      }
-
-      .logo img{
-        position:relative;
-        float:left;
-        top:3px;
-        padding:0 10px 0 10px;
-        width:40px;
-      }
-
-      input{
-        float:left;
-        margin:10px 0 0 10px;
-        width:240px;
-        height:28px;
-        border:1px solid #eee;
-        border-radius: 10px;
-        padding-left: 10px;
-      }
-
-      nav{
-        display:flex;
-        justify-content: flex-start;
-        padding: 5px 0 0 10px;
-      }
-
-      nav ul{
-        display:flex;
-        justify-content:flex-start;
-      }
-
-      h3 {
-        padding-top:10px;
-      }
-
-      nav li{
-        padding:12px 0 10px 10px;
-      }
-
-      article{
-        float:left;
-        margin-top:1px;
-        width:75%;
-        padding:24px;
-        background-color: white;
-        border:1px solid #ccc;
-      }
-
-      h2{
-        padding:10px;
-      }
-
-      .top{
-        width:100%;
-        height:400px;
-        display:block;
-      }
-
-      .index{
-        display:block;
-        float:left;
-        margin:20px 20px 20px 0;
-        padding:20px;
-        border:1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      .index li{
-        padding:2px;
-      }
-
-      table{
-        float:right;
-        text-align:right;
-        border:1px solid #ccc;
-        text-align: center;
-        border-radius: 5px;
-        border:0px solid #008000;
-        margin:20px 0 20px 20px;
-        background:#008000;
-        border-collapse:collapse;
-        font-size:14px;
-      }
-
-      table tbody,table td, table tr{
-        border-collapse:collapse;
-      }
-
-      table td, table tr{
-        border:1px solid #ccc;
-        color:white;
-        height:35px;
-      }
-
-      .table-head, .table-kind, .table-value{
-        height:25px;
-        border-radius: 5px;
-        padding: 5px 10px;
-        font-weight:bold;
-        font-size: 18px;
-        color:white;
-        line-height: 2.2;
-      }
-
-      .table-value{
-        background:white;
-        /* border:1px solid #ccc; */
-        border-radius: 0;
-        color:black;
-        font-size:14px;
-      }
-
-      hr{
-        margin:20px 0;
-      }
-
-      .contents ul li{
-        font-size:26px;
-        font-weight:bold;
-        padding:20px 0 20px 10px;
-      }
-
-      .contents ul li a, .index a{
-        color:#0275d8;
-      }
-
-      .contents p{
-        margin-bottom:20px;
-      }
-
-      aside{
-        display:block;
-        float:right;
-        background: white;
-        width:18%;
-        border:1px solid #ccc;
-        margin:auto;
-      }
-
-      aside ul li{
-        height:20px;
-        padding:10px 20px 10px 20px;
-        border-bottom: 1px solid #ccc;
-      }
-
-      /* aside ul li:last-child{
-        padding-bottom: 20px;
-      } */
-
-      .list-head{
-        height:50px;
-        font-weight:bold;
-        font-size: 20px;
-          padding:20px 0 0 20px;
-        border-bottom: 1px solid #ccc;
-      }
-
-      footer{
-        float:right;
-        bottom:0;
-        width:100%;
-        background-color:white;
-        color:#008000;
-        font-size:12px;
-        padding-top:30px;
-        padding-bottom:30px;
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/3.css">
   </head>
   <body>
     <div class="bg-contents"></div>
     <div id="wrapper">
-      <div id="wire">
-        <header>
-            <div class="logo">
-              <a href="index.html">
-                <img src="imgs/kiwi.PNG">
-                <h1>kiwipedia</h1>
-              </a>
-              <input type="text" name="search" placeholder="검색">
+      <header>
+        <div class="header">
+          <div class="title-logo">
+            <a href="index.html">
+              <img src="imgs/kiwi.PNG" width=50px;>
+            </a>
+            <div class="title">
+              <a href="index.html">Kiwipedia</a>
             </div>
-            <nav>
-              <h3>연관검색어</h3>
-              <ul>
-                <li><a href="1.html">| 키위</a></li>
-                <li><a href="2.html">| 키위새</a></li>
-              </ul>
-            </nav>
-        </header>
+          </div>
+          <nav>
+            <h3>관련자료</h3>
+            <ul>
+              <li><a href="2.html">&nbsp;키위새</a></li>
+              <li><a href="3.html">&nbsp;도도새</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div id="wire">
 
         <section>
           <article id="contents">
-            <h2>도도새</h2>
+            <div class="keyword">도도새</div>
             <hr>
             <div class="top">
               <div class="index" id="index">
@@ -266,7 +57,7 @@
                     <td colspan="3"><b><i>Apetery</i></b> Shaw, 1813</td>
                   </tr>
                   <tr>
-                    <td rowspan="7"><div class="table-kind">분류</div></td>
+                    <td rowspan="7" class="table-type"><div class="table-kind">분류</div></td>
                     <td><div class="table-kind2">&nbsp;&nbsp;계&nbsp;&nbsp;</div></td>
                     <td><div class="table-value">동물계</div></td>
                   </tr>
@@ -291,7 +82,7 @@
                     <td><div class="table-value">†도도속(Raphus)</div></td>
                   </tr>
                   <tr>
-                    <td colspan="3">종</td>
+                    <td colspan="3" class="table-type">종</td>
                   </tr>
                   <tr>
                     <td colspan="3">†도도(R. cucullatus)
